@@ -35,71 +35,71 @@ MyMedicKit es una solución integral que combina una aplicación móvil y una ap
    
         Conexión a internet.
    
+   
     ·Aplicación de Escritorio:
    
         Sistema operativo: Windows o Linux.
    
         Conexión a internet.
+   
 
-  -Instalación:
+    -Instalación:
   
-    ·Aplicación Móvil:
+      ·Aplicación Móvil:
     
-      Descargar el instalador desde el repositorio.
-      
-      Ejecutar el instalador y seguir las instrucciones del manual del usuario.
+        Descargar el instalador desde el repositorio.
+        
+        Ejecutar el instalador y seguir las instrucciones del manual del usuario.
 
       
     ·Aplicación de Escritorio:
     
-      Descargar el instalador desde el repositorio.
-      
-      Ejecutar el instalador y seguir las instrucciones del manual del administrador.
+        Descargar el instalador desde el repositorio.
+        
+        Ejecutar el instalador y seguir las instrucciones del manual del administrador.
 
-  -Configuración Inicial:
+    -Configuración Inicial:
   
     ·Aplicación Móvil:
-    
-      Registrarse con una cuenta de usuario.
-      Escanear sus medicamentos para agregar al listado.
+      
+        Registrarse con una cuenta de usuario.
+        Escanear sus medicamentos para agregar al listado.
 
       
     ·Aplicación de Escritorio:
     
-      Iniciar sesión con las credenciales de administrador.
-      Configurar perfiles de usuarios y opciones de soporte al cliente.
+        Iniciar sesión con las credenciales de administrador.
+        Configurar perfiles de usuarios y opciones de soporte al cliente.
 
-3. Información sobre cómo usarlo
+4. Información sobre cómo usarlo
    
-  ·Aplicación Móvil:
+    ·Aplicación Móvil:
   
-    -Escaneo de Medicamentos:
-    
-      Abrir la aplicación y seleccionar la opción de escaneo.
-      Utilizar la cámara para escanear el código de barra del medicamento.
+        -Escaneo de Medicamentos:
+          Abrir la aplicación y seleccionar la opción de escaneo.
+          Utilizar la cámara para escanear el código de barra del medicamento.
 
 
-    -Acceso a Información:
-    
-      Una vez escaneado, seleccionar el medicamento en la lista para ver información detallada.
+        -Acceso a Información:
+          Una vez escaneado, seleccionar el medicamento en la lista para ver información detallada.
    
-    -Recordatorios:
-      Configurar recordatorios para cada medicamento según el horario de toma.
+        -Recordatorios:
+          Configurar recordatorios para cada medicamento según el horario de toma.
     
-    -Gestión de Tratamientos:
-      Revisar y organizar el listado de medicamentos según sus necesidades.
+        -Gestión de Tratamientos:
+          Revisar y organizar el listado de medicamentos según sus necesidades.
 
 
-  ·Aplicación de Escritorio:
+    ·Aplicación de Escritorio:
 
-    -Gestión de Usuarios:
-      Administrar los perfiles de los usuarios registrados en la aplicación móvil.
+        -Gestión de Usuarios:
+          Administrar los perfiles de los usuarios registrados en la aplicación móvil.
     
-    -Atención al Cliente:
-      Proporcionar soporte personalizado a través del panel de atención.
+        -Atención al Cliente:
+          Proporcionar soporte personalizado a través del panel de atención.
 
-    -Sincronización:
-      Asegurar que la información de los usuarios esté sincronizada y actualizada entre las aplicaciones móvil y de escritorio.
+        -Sincronización:
+          Asegurar que la información de los usuarios esté sincronizada y actualizada entre las aplicaciones móvil y de escritorio.
 
 4. Autores
    
