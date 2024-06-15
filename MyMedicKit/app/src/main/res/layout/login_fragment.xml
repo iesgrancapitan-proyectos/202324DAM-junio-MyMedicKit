@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".InicioFragments.LoginFragment">
+
+    <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logo_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <TextView
+        android:id="@+id/titleLogin"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoApp" />
+
+    <TextView
+        android:id="@+id/txt_pass"
+        android:layout_width="300dp"
+        android:layout_height="34dp"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/email"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/forma_boton"
+        android:elevation="5dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="532dp"
+        android:background="@drawable/forma_boton"
+        android:elevation="10dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/login"
+        android:textColor="@color/blanco"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editContrasena"
+        android:layout_width="300dp"
+        android:layout_height="47dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/forma_edittext"
+        android:elevation="5dp"
+        android:hint="@string/campo_pass"
+        android:inputType="textPassword"
+        android:paddingHorizontal="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+    <TextView
+        android:id="@+id/contrasenaOlvidada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/pass_forget"
+        android:textAlignment="textEnd"
+        android:textColor="@color/teal_700"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.767"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editContrasena" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="300dp"
+        android:layout_height="47dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/forma_edittext"
+        android:elevation="5dp"
+        android:hint="@string/campo_email"
+        android:inputType="textEmailAddress"
+        android:paddingHorizontal="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleLogin" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="300dp"
+        android:layout_height="34dp"
+        android:layout_marginHorizontal="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/pass"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/editContrasena"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/mostrar_pass"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/ojo"
+        android:elevation="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/editContrasena"
+        app:layout_constraintEnd_toEndOf="@+id/editContrasena"
+        app:layout_constraintTop_toTopOf="@+id/editContrasena"
+        app:layout_constraintVertical_bias="0.4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

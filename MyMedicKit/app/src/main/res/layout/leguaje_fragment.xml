@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ajustes.FragmentLanguage"
+    android:background="@color/ligthgrey">
+
+    <Button
+        android:id="@+id/btnIngles"
+        android:layout_width="310dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/forma_boton"
+        android:elevation="5dp"
+        android:text="@string/ingles"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEspanol" />
+
+    <Button
+        android:id="@+id/btnEspanol"
+        android:layout_width="310dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/forma_boton"
+        android:elevation="5dp"
+        android:text="@string/espanol"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnItaliano" />
+
+    <Button
+        android:id="@+id/btnItaliano"
+        android:layout_width="310dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/forma_boton"
+        android:elevation="35dp"
+        android:text="@string/italiano"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloAjustes" />
+
+    <Button
+        android:id="@+id/btnFrances"
+        android:layout_width="310dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/forma_boton"
+        android:elevation="5dp"
+        android:text="@string/frances"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngles" />
+
+    <TextView
+        android:id="@+id/tituloAjustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/privacidad"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.302"
+        app:layout_constraintStart_toEndOf="@+id/img_volver_perfil"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <ImageView
+        android:id="@+id/img_volver_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/forma_boton_redondo"
+        android:elevation="5dp"
+        android:src="@drawable/icon_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

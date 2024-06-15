@@ -1,0 +1,120 @@
+Index: app/src/main/java/es/grancapitan/mymedickit/Notificaciones/MedicamentoAutoCompleteAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/es/grancapitan/mymedickit/Notificaciones/MedicamentoAutoCompleteAdapter.java b/app/src/main/java/es/grancapitan/mymedickit/Notificaciones/MedicamentoAutoCompleteAdapter.java
+new file mode 100644
+--- /dev/null	(date 1718189533531)
++++ b/app/src/main/java/es/grancapitan/mymedickit/Notificaciones/MedicamentoAutoCompleteAdapter.java	(date 1718189533531)
+@@ -0,0 +1,64 @@
++package es.grancapitan.mymedickit.Notificaciones;
++
++import android.content.Context;
++import android.widget.ArrayAdapter;
++import android.widget.Filter;
++import android.widget.Filterable;
++
++import java.util.ArrayList;
++import java.util.List;
++
++import es.grancapitan.mymedickit.Objetos.Medicamento;
++
++public class MedicamentoAutoCompleteAdapter extends ArrayAdapter<Medicamento> implements Filterable {
++    private List<Medicamento> medicamentos;
++    private List<Medicamento> medicamentosFiltered;
++
++    public MedicamentoAutoCompleteAdapter(Context context, List<Medicamento> medicamentos) {
++        super(context, android.R.layout.simple_dropdown_item_1line, medicamentos);
++        this.medicamentos = medicamentos;
++        this.medicamentosFiltered = new ArrayList<>(medicamentos);
++    }
++
++    @Override
++    public int getCount() {
++        return medicamentosFiltered.size();
++    }
++
++    @Override
++    public Medicamento getItem(int position) {
++        return medicamentosFiltered.get(position);
++    }
++
++    @Override
++    public Filter getFilter() {
++        return new Filter() {
++            @Override
++            protected FilterResults performFiltering(CharSequence constraint) {
++                FilterResults results = new FilterResults();
++                List<Medicamento> filteredMedicamentos = new ArrayList<>();
++
++                if (constraint != null && constraint.length() > 0) {
++                    String filterPattern = constraint.toString().toLowerCase().trim();
++                    for (Medicamento medicamento : medicamentos) {
++                        if (medicamento.getNombre().toLowerCase().contains(filterPattern)) {
++                            filteredMedicamentos.add(medicamento);
++                        }
++                    }
++                } else {
++                    filteredMedicamentos.addAll(medicamentos);
++                }
++
++                results.values = filteredMedicamentos;
++                results.count = filteredMedicamentos.size();
++                return results;
++            }
++
++            @Override
++            protected void publishResults(CharSequence constraint, FilterResults results) {
++                medicamentosFiltered = (List<Medicamento>) results.values;
++                notifyDataSetChanged();
++            }
++        };
++    }
++}
+Index: app/src/main/java/es/grancapitan/mymedickit/FragmentsMain/Contrasena_olvidada.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package es.grancapitan.mymedickit.FragmentsMain;\r\n\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.Button;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.annotation.Nullable;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.fragment.app.FragmentManager;\r\nimport androidx.fragment.app.FragmentTransaction;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.Navigation;\r\n\r\nimport es.grancapitan.mymedickit.R;\r\n\r\npublic class Contrasena_olvidada extends Fragment {\r\n\r\n    @Nullable\r\n    @Override\r\n    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {\r\n        View view = inflater.inflate(R.layout.contrasena_olvidada, container, false);\r\n\r\n        Button btnVolver = view.findViewById(R.id.btnVolver);\r\n        btnVolver.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                NavController navController = Navigation.findNavController(v);\r\n                navController.popBackStack();\r\n            }\r\n        });\r\n\r\n        return view;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/es/grancapitan/mymedickit/FragmentsMain/Contrasena_olvidada.java b/app/src/main/java/es/grancapitan/mymedickit/FragmentsMain/Contrasena_olvidada.java
+--- a/app/src/main/java/es/grancapitan/mymedickit/FragmentsMain/Contrasena_olvidada.java	(revision 28d32f841c78018a9c16e3d726f8e1ef7aaa4856)
++++ b/app/src/main/java/es/grancapitan/mymedickit/FragmentsMain/Contrasena_olvidada.java	(date 1718126655406)
+@@ -9,8 +9,6 @@
+ import androidx.annotation.NonNull;
+ import androidx.annotation.Nullable;
+ import androidx.fragment.app.Fragment;
+-import androidx.fragment.app.FragmentManager;
+-import androidx.fragment.app.FragmentTransaction;
+ import androidx.navigation.NavController;
+ import androidx.navigation.Navigation;
+ 
+Index: app/src/main/java/es/grancapitan/mymedickit/Ajustes/FragmentAjustes.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package es.grancapitan.mymedickit.Ajustes;\r\n\r\nimport static android.content.Context.MODE_PRIVATE;\r\n\r\nimport android.content.Context;\r\nimport android.content.Intent;\r\nimport android.content.SharedPreferences;\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.Button;\r\nimport android.widget.ImageView;\r\n\r\nimport androidx.appcompat.app.AlertDialog;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.Navigation;\r\n\r\nimport es.grancapitan.mymedickit.InicioActivity;\r\nimport es.grancapitan.mymedickit.R;\r\n\r\npublic class FragmentAjustes extends Fragment {\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        View view = inflater.inflate(R.layout.fragment_ajustes, container, false);\r\n\r\n        ImageView volverAtrasAjustes = view.findViewById(R.id.img_volver_perfil);\r\n        Button cerrarSesion = view.findViewById(R.id.btn_cerrarSesion);\r\n        Button btnSeguridad = view.findViewById(R.id.btn_seguridad_ajustes);\r\n        Button btnLanguage = view.findViewById(R.id.btn_lenguaje);\r\n\r\n        cerrarSesion.setOnClickListener(v -> mostrarConfirmacionCerrarSesion());\r\n        btnLanguage.setOnClickListener(v -> goToLanguageFragment(v));\r\n        volverAtrasAjustes.setOnClickListener(v -> goToBack(v));\r\n        btnSeguridad.setOnClickListener(v -> {\r\n            NavController navController = Navigation.findNavController(view);\r\n            navController.navigate(R.id.navigation_chat);\r\n        });\r\n\r\n        return view;\r\n    }\r\n\r\n    private void logout() {\r\n        Intent intent = new Intent(getActivity(), InicioActivity.class);\r\n        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);\r\n        startActivity(intent);\r\n        requireActivity().finish();\r\n    }\r\n\r\n    private void mostrarConfirmacionCerrarSesion() {\r\n        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext(), R.style.AlertDialogCustom);\r\n        builder.setTitle(getString(R.string.confirmacion_title))\r\n                .setMessage(getString(R.string.confirmacion_cerrar_sesion_message))\r\n                .setPositiveButton(getString(R.string.confirmacion_cerrar_sesion_positive), (dialog, which) -> limpiarDatosYCerrarSesion())\r\n                .setNegativeButton(getString(R.string.confirmacion_cerrar_sesion_negative), null)\r\n                .show();\r\n    }\r\n\r\n    private void limpiarDatosYCerrarSesion() {\r\n        // Usar el mismo nombre de preferencias que se usa para guardar los datos de usuario\r\n        SharedPreferences sharedPreferences = requireActivity().getSharedPreferences(\"UsuarioPrefs\", Context.MODE_PRIVATE);\r\n        SharedPreferences.Editor editor = sharedPreferences.edit();\r\n        editor.clear(); // Limpia todas las preferencias\r\n        editor.apply();\r\n        logout();\r\n    }\r\n\r\n\r\n\r\n    private void goToBack(View view) {\r\n        NavController navController = Navigation.findNavController(view);\r\n        navController.navigate(R.id.navigation_perfil);\r\n    }\r\n\r\n    private void goToLanguageFragment(View view) {\r\n        NavController navController = Navigation.findNavController(view);\r\n        navController.navigate(R.id.navigation_language);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/es/grancapitan/mymedickit/Ajustes/FragmentAjustes.java b/app/src/main/java/es/grancapitan/mymedickit/Ajustes/FragmentAjustes.java
+--- a/app/src/main/java/es/grancapitan/mymedickit/Ajustes/FragmentAjustes.java	(revision 28d32f841c78018a9c16e3d726f8e1ef7aaa4856)
++++ b/app/src/main/java/es/grancapitan/mymedickit/Ajustes/FragmentAjustes.java	(date 1718126655375)
+@@ -60,7 +60,6 @@
+     }
+ 
+     private void limpiarDatosYCerrarSesion() {
+-        // Usar el mismo nombre de preferencias que se usa para guardar los datos de usuario
+         SharedPreferences sharedPreferences = requireActivity().getSharedPreferences("UsuarioPrefs", Context.MODE_PRIVATE);
+         SharedPreferences.Editor editor = sharedPreferences.edit();
+         editor.clear(); // Limpia todas las preferencias
+@@ -68,8 +67,6 @@
+         logout();
+     }
+ 
+-
+-
+     private void goToBack(View view) {
+         NavController navController = Navigation.findNavController(view);
+         navController.navigate(R.id.navigation_perfil);

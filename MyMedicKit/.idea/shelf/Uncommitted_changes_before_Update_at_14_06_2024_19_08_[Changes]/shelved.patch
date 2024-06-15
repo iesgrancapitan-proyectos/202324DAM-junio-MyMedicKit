@@ -1,0 +1,22 @@
+Index: app/src/main/java/es/grancapitan/mymedickit/Activities/InicioActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package es.grancapitan.mymedickit.Activities;\r\n\r\nimport android.content.Intent;\r\nimport android.content.SharedPreferences;\r\nimport android.os.Bundle;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.navigation.fragment.NavHostFragment;\r\n\r\nimport es.grancapitan.mymedickit.R;\r\n\r\npublic class InicioActivity extends AppCompatActivity {\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main); // Establece el layout de la actividad\r\n\r\n        // Obtener las preferencias compartidas del usuario\r\n        SharedPreferences sharedPreferences = getSharedPreferences(\"UsuarioPrefs\", MODE_PRIVATE);\r\n        boolean isLoggedIn = sharedPreferences.getBoolean(\"isLoggedIn\", false); // Verificar estado de inicio de sesión\r\n        String email = sharedPreferences.getString(\"email\", \"\"); // Obtener el email guardado\r\n\r\n        // Verifica el estado de inicio de sesión y la existencia de un email válido\r\n        if (isLoggedIn && !email.isEmpty()) {\r\n            // Si está iniciado sesión y hay un email válido, redirige a MenuActivity\r\n            Intent intent = new Intent(this, MenuActivity.class);\r\n            startActivity(intent);\r\n            finish(); // Finaliza esta actividad para evitar volver atrás\r\n        } else {\r\n            // Si no hay sesión iniciada o no hay un email válido\r\n            SharedPreferences.Editor editor = sharedPreferences.edit();\r\n            editor.putBoolean(\"isLoggedIn\", false); // Establece isLoggedIn a false\r\n            editor.apply();\r\n\r\n            // Configuración inicial del NavHostFragment si no se está restaurando desde estado guardado\r\n            if (savedInstanceState == null) {\r\n                NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.contenedor);\r\n                if (navHostFragment == null) {\r\n                    // Crea un nuevo NavHostFragment con el gráfico de navegación nav_graph_inicio\r\n                    navHostFragment = NavHostFragment.create(R.navigation.nav_graph_inicio);\r\n                    getSupportFragmentManager().beginTransaction()\r\n                            .replace(R.id.contenedor, navHostFragment)\r\n                            .setPrimaryNavigationFragment(navHostFragment)\r\n                            .commit();\r\n                }\r\n            }\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/es/grancapitan/mymedickit/Activities/InicioActivity.java b/app/src/main/java/es/grancapitan/mymedickit/Activities/InicioActivity.java
+--- a/app/src/main/java/es/grancapitan/mymedickit/Activities/InicioActivity.java	(revision b13f03c44fc23e5222a2487fc7fbb1ef94bb500e)
++++ b/app/src/main/java/es/grancapitan/mymedickit/Activities/InicioActivity.java	(date 1718384911548)
+@@ -14,7 +14,7 @@
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_main); // Establece el layout de la actividad
++        setContentView(R.layout.inicio_activity); // Establece el layout de la actividad
+ 
+         // Obtener las preferencias compartidas del usuario
+         SharedPreferences sharedPreferences = getSharedPreferences("UsuarioPrefs", MODE_PRIVATE);
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/inicio_activity.xml
+rename from app/src/main/res/layout/activity_main.xml
+rename to app/src/main/res/layout/inicio_activity.xml

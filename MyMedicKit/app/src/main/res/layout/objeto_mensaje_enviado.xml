@@ -1,0 +1,16 @@
+<!-- res/layout/item_message_sent.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:padding="8dp">
+
+    <!-- TextView para mostrar el contenido del mensaje enviado -->
+    <TextView
+        android:id="@+id/textoMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mensaje_enviado"
+        android:padding="8dp"
+        android:textColor="@android:color/black"/>
+</LinearLayout>

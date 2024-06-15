@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">MyMedicKit</string>
+
+    <!-- Enlace servidor -->
+    <string name="ip" translatable="false">http://192.168.0.10/BDRemota/</string>
+    <!--String ip = "https://mymedickit.000webhostapp.com/BDRemota/-->
+
+    <!-- Fragment Inicio -->
+    <string name="iniciotitulo">MyMedicKit</string>
+    <string name="detalles">Detalles</string>
+    <string name="hola">Hola, %1$s</string>
+    <string name="subtitulo_hola">Estos son los datos de tu perfil</string>
+
+    <!-- Frangment Login -->
+    <string name="email">Email</string>
+    <string name="campo_email">example@example.com</string>
+    <string name="pass">Contraseña</string>
+    <string name="campo_pass">••••••••••••••</string>
+    <string name="pass_forget">¿Contraseña Olvidada?</string>
+
+    <string name="login">Iniciar Sesión</string>
+    <string name="register">Registrarse</string>
+
+    <string name="siguiente">Siguiente</string>
+    <string name="volver">Volver</string>
+    <string name="finalizar">Finalizar</string>
+
+    <!-- Textos para el fragment recuperar -->
+    <string name="texto_recuperar1">Para cambiar su contraseña escriba a este correo:</string>
+    <string name="texto_recuperar2">mymedickit@gmail.com</string>
+
+    <!-- Textos para el fragment registrarse -->
+    <string name="texto_registrarse1">Introduce el correo para crear una cuenta</string>
+    <string name="texto_registrarse2">Registro con exito</string>
+    <string name="texto_registrarse3">El usuario ha sido creado con éxito, ya puede iniciar sesión con el nuevo usuario.</string>
+
+    <string name="texto_pass">Introduce una contraseña</string>
+    <string name="texto_pass2">Repite la contraseña</string>
+    <string name="ver_pass">Mostrar contraseña</string>
+    <string name="espanol">Español</string>
+    <string name="ingles">Ingles</string>
+    <string name="italiano">Italiano</string>
+    <string name="frances">Frances</string>
+
+    <string name="inicio">Inicio</string>
+    <string name="crear">Añadir</string>
+    <string name="perfil">Perfil</string>
+    <string name="ajustes">Ajustes</string>
+
+    <!-- Recursos para Facebook -->
+
+    <!-- Nombres de Ajustes -->
+    <string name="editar">Editar</string>
+    <string name="privacidad">Lenguaje</string>
+    <string name="listar">Listar</string>
+
+    <string name="chat">Atención al cliente</string>
+    <string name="notificaciones">Notificaciones</string>
+    <string name="titulo_perfil">Información Personal</string>
+    <string name="nombre">Nombre</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="recordatorios">Recordatorios</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="telefono">Telefono</string>
+    <string name="fecha_nacimiento">Fecha Nacimiento</string>
+    <string name="guardar">Guardar</string>
+    <string name="unidades">Unidades</string>
+    <string name="Dosis">Dosis</string>
+    <string name="fecha_caducidad">Fecha Caducidad</string>
+    <string name="texto_comentar_crear">Informacion sobre el medicamento...</string>
+    <string name="titulo_crear">Nombre</string>
+    <string name="nuevo_nombre">Nuevo Nombre</string>
+    <string name="fecha_nacimiento_hint">xxxx-xx-xx</string>
+
+    <string name="hint_medicamento">Medicamento...</string>
+    <string name="publicar_crear">Añadir Medicamento</string>
+    <string name="ayuda_1">Informar de un problema</string>
+    <string name="ayuda_2">Estado de la cuenta</string>
+    <string name="ayuda_3">Servicio de ayuda</string>
+    <string name="ayuda_5">Ayuda sobre privacidad y seguridad</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="reestablecer_pass">Reestablecer la contraseña</string>
+    <string name="pref_key_language">preferencia lenguaje\n</string>
+
+    <!-- Mensajes Dialog -->
+    <string name="confirmacion_title">Confirmación</string>
+    <string name="confirmacion_borrar_message">¿Está seguro de que borrar el medicamento?</string>
+    <string name="confirmacion_cerrar_sesion_message">¿Está seguro de que desea cerrar la sesión?</string>
+    <string name="confirmacion_cerrar_sesion_positive">Sí</string>
+    <string name="confirmacion_cerrar_sesion_negative">Cancelar</string>
+
+    <!-- Recordatorios/Notificaciones -->
+    <string name="diariamente">Diariamente</string>
+    <string name="hoy">Solo hoy</string>
+    <string name="programar">Programar</string>
+    <string name="frecuencia">Frecuencia</string>
+    <string name="btn_programar">Programar Notificación</string>
+    <string name="alarma">Alarma</string>
+    <string name="error_notificacion">Seleccione una opción de repetición</string>
+    <string name="notificacion_programada">Notificación Programada</string>
+    <string name="Scanner">Scanner</string>
+    <string name="manualmente">Introducir Manualmente</string>
+    <string name="nombre_medicamento">Nombre Medicamento:</string>
+    <string name="forma_farmaceutica">Forma Farmaceutica:</string>
+    <string name="laboratorio">Laboratorio:</string>
+    <string name="principios_activos">Principios Activos:</string>
+    <string name="preescripcion">Preescripción</string>
+    <string name="via_administración">Vía de Administración:</string>
+    <string name="CN">CN</string>
+    <string name="mas_informacion">Más Información</string>
+    <string name="PDF_1">PDF 1</string>
+    <string name="PDF_2">PDF 2</string>
+    <string name="Scan_Code">Escanear código</string>
+    <string name="buscar_cn">Buscar por Código Nacional</string>
+    <string name="introduce_cn">Introduce un CN válido</string>
+    <string name="informacion">Información</string>
+    <string name="codigo_nacional">Código Nacional</string>
+    <string name="enviar">Enviar</string>
+    <string name="error_list_medicamentos">Error listando medicamentos</string>
+    <string name="error_nombre_med">Por favor, escriba el nombre de un medicamento</string>
+    <string name="error_actualizar">Error al actualizar los datos</string>
+    <string name="error_registrar_medicamento">Error al registrar medicamento</string>
+    <string name="medicamento_registrado">Medicamento registrado correctamente</string>
+    <string name="toast_login_correcto" translatable="false">Inicio de sesión con éxito</string>
+
+
+</resources>

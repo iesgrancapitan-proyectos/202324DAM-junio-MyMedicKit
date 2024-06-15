@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:navGraph="@navigation/nav_graph_menu"
+    tools:context=".InicioFragments.RegistrarFragment">
+
+    <!-- TextView para el titulo -->
+
+    <!-- Button para volver atrás (Iniciar sesión) -->
+    <TextView
+        android:id="@+id/tituloRegistrar"
+        android:layout_width="347dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/register"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_volver"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/forma_boton"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_registrar"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <!-- Button para registrarse -->
+    <Button
+        android:id="@+id/btn_registrar"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="596dp"
+        android:background="@drawable/forma_boton"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/register"
+        android:textColor="@color/blanco"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- CheckBox para mostrar contraseña -->
+    <CheckBox
+        android:id="@+id/check_mostrar_pass"
+        style="@style/estilo_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/ver_pass"
+        android:textColor="@color/teal_700"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_pass2_registrarse2" />
+
+    <!-- EditText para repetir la contraseña -->
+    <EditText
+        android:id="@+id/editText_pass2_registrarse2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/forma_edittext"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:hint="@string/campo_pass"
+        android:inputType="textPassword"
+        android:minHeight="45dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/azul"
+        android:textColorHint="@color/gris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pass2" />
+
+    <!-- EditText para escribir la fecha de nacimiento -->
+
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/texto_registrarse1"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloRegistrar" />
+
+    <EditText
+        android:id="@+id/editNacimientoRegister"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/forma_edittext"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:hint="@string/fecha_nacimiento_hint"
+        android:inputType="textEmailAddress"
+        android:minHeight="45dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/azul"
+        android:textColorHint="@color/gris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nacimiento" />
+
+    <!-- TextView titulo Fecha de Nacimiento -->
+
+    <!-- EditText para repetir los apellidos -->
+
+    <TextView
+        android:id="@+id/txt_nacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/fecha_nacimiento"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editApellido" />
+
+    <EditText
+        android:id="@+id/editApellido"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/forma_edittext"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:hint="@string/apellidos"
+        android:inputType="textEmailAddress"
+        android:minHeight="45dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/azul"
+        android:textColorHint="@color/gris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_apellido" />
+
+    <!-- TextView titulo Apellidos -->
+
+    <!-- EditText para escribir la contraseña -->
+    <TextView
+        android:id="@+id/txt_apellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/apellidos"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNombre"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editContrasena"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/forma_edittext"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:hint="@string/campo_pass"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/azul"
+        android:textColorHint="@color/gris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pass" />
+
+    <!-- TextView titulo Contraseña -->
+    <TextView
+        android:id="@+id/txt_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/texto_pass"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNacimientoRegister"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- TextView titulo Repetir Contraseña -->
+
+    <!-- EditText para repetir el nombre -->
+    <TextView
+        android:id="@+id/txt_pass2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/texto_pass2"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editContrasena" />
+
+    <EditText
+        android:id="@+id/editNombre"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/forma_edittext"
+        android:elevation="5dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:hint="@string/nombre"
+        android:inputType="textEmailAddress"
+        android:minHeight="45dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/azul"
+        android:textColorHint="@color/gris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombre" />
+
+    <!-- TextView titulo Nombre -->
+
+    <TextView
+        android:id="@+id/txt_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/nombre"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/forma_edittext"
+        android:elevation="5dp"
+        android:fontFamily="@font/open_sans"
+        android:hint="@string/campo_email"
+        android:inputType="textEmailAddress"
+        android:minHeight="45dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/black"
+        android:textColorHighlight="@color/azul"
+        android:textColorHint="@color/gris"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="-1dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="-42dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

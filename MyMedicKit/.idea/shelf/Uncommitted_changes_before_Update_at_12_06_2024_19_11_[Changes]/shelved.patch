@@ -1,0 +1,256 @@
+Index: app/src/main/res/layout/login_fragment.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:background=\"@color/white\"\r\n    tools:context=\".InicioFragments.LoginFragment\"\r\n    app:navGraph=\"@navigation/nav_graph_menu\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/titleLogin\"\r\n        android:layout_width=\"330dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:gravity=\"center\"\r\n        android:text=\"@string/login\"\r\n        android:textColor=\"@color/black\"\r\n        android:textSize=\"35sp\"\r\n        android:textStyle=\"bold\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.493\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.143\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/btnLogin\"\r\n        android:layout_width=\"330dp\"\r\n        android:layout_height=\"55dp\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:layout_marginEnd=\"16dp\"\r\n        android:layout_marginBottom=\"16dp\"\r\n        android:background=\"@drawable/borde_iniciar_sesion\"\r\n        android:fontFamily=\"@font/open_sans\"\r\n        android:text=\"@string/login\"\r\n        android:textColor=\"@color/blanco\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.489\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.686\" />\r\n\r\n    <Button\r\n        android:id=\"@+id/btnRegister\"\r\n        android:layout_width=\"330dp\"\r\n        android:layout_height=\"55dp\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:layout_marginEnd=\"16dp\"\r\n        android:background=\"@drawable/borde_iniciar_sesion\"\r\n        android:fontFamily=\"@font/open_sans\"\r\n        android:text=\"@string/register\"\r\n        android:textColor=\"@color/white\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.489\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.778\" />\r\n\r\n\r\n    <TextView\r\n        android:id=\"@+id/txt_pass\"\r\n        android:layout_width=\"330dp\"\r\n        android:layout_height=\"34dp\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:layout_marginEnd=\"16dp\"\r\n        android:fontFamily=\"@font/open_sans\"\r\n        android:text=\"@string/email\"\r\n        android:textColor=\"@color/black\"\r\n        android:textSize=\"16dp\"\r\n        android:textStyle=\"bold\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.489\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.259\" />\r\n\r\n\r\n    <TextView\r\n        android:id=\"@+id/textView3\"\r\n        android:layout_width=\"330dp\"\r\n        android:layout_height=\"34dp\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:layout_marginEnd=\"16dp\"\r\n        android:fontFamily=\"@font/open_sans\"\r\n        android:text=\"@string/pass\"\r\n        android:textColor=\"@color/black\"\r\n        android:textSize=\"16dp\"\r\n        android:textStyle=\"bold\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.489\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.418\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/editContrasena\"\r\n        android:layout_width=\"330dp\"\r\n        android:layout_height=\"47dp\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:layout_marginEnd=\"16dp\"\r\n        android:layout_marginBottom=\"16dp\"\r\n        android:background=\"@drawable/borde_general\"\r\n        android:backgroundTint=\"@color/ligthgrey\"\r\n        android:ems=\"10\"\r\n        android:fontFamily=\"@font/open_sans\"\r\n        android:hint=\"@string/campo_pass\"\r\n        android:inputType=\"textPassword\"\r\n        android:minHeight=\"48dp\"\r\n        android:paddingStart=\"15dp\"\r\n        android:paddingEnd=\"15dp\"\r\n        android:textColor=\"@color/black\"\r\n        android:textColorHighlight=\"@color/azul\"\r\n        android:textColorHint=\"@color/gris\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.489\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.489\" />\r\n\r\n    <ImageButton\r\n        android:id=\"@+id/mostrar_pass\"\r\n        style=\"@style/estilo_check\"\r\n        android:layout_width=\"30dp\"\r\n        android:layout_height=\"26dp\"\r\n        android:background=\"@drawable/ojo\"\r\n        android:minHeight=\"48dp\"\r\n        android:textColor=\"@color/black\"\r\n        android:textSize=\"16sp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.892\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.479\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/contrasenaOlvidada\"\r\n        android:layout_width=\"330dp\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginBottom=\"36dp\"\r\n        android:fontFamily=\"@font/open_sans\"\r\n        android:text=\"@string/pass_forget\"\r\n        android:textAlignment=\"textEnd\"\r\n        android:textColor=\"@color/teal_700\"\r\n        android:textSize=\"16sp\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.493\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.555\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/editEmail\"\r\n        android:layout_width=\"330dp\"\r\n        android:layout_height=\"47dp\"\r\n        android:layout_marginStart=\"16dp\"\r\n        android:layout_marginEnd=\"16dp\"\r\n        android:layout_marginBottom=\"16dp\"\r\n        android:background=\"@drawable/borde_general\"\r\n        android:backgroundTint=\"@color/ligthgrey\"\r\n        android:ems=\"10\"\r\n        android:fontFamily=\"@font/open_sans\"\r\n        android:hint=\"@string/campo_email\"\r\n        android:inputType=\"textEmailAddress\"\r\n        android:minHeight=\"48dp\"\r\n        android:paddingStart=\"15dp\"\r\n        android:paddingEnd=\"15dp\"\r\n        android:textColor=\"@color/black\"\r\n        android:textColorHighlight=\"@color/azul\"\r\n        android:textColorHint=\"@color/gris\"\r\n        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n        app:layout_constraintEnd_toEndOf=\"parent\"\r\n        app:layout_constraintHorizontal_bias=\"0.489\"\r\n        app:layout_constraintStart_toStartOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintVertical_bias=\"0.32\" />\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/login_fragment.xml b/app/src/main/res/layout/login_fragment.xml
+--- a/app/src/main/res/layout/login_fragment.xml	(revision 37aad3bc714ec54978c04d6aed411796be64c1c8)
++++ b/app/src/main/res/layout/login_fragment.xml	(date 1718212265747)
+@@ -1,12 +1,12 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
++<androidx.constraintlayout.widget.ConstraintLayout
++    xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
+     android:background="@color/white"
+-    tools:context=".InicioFragments.LoginFragment"
+-    app:navGraph="@navigation/nav_graph_menu">
++    tools:context=".InicioFragments.LoginFragment">
+ 
+     <TextView
+         android:id="@+id/titleLogin"
+@@ -17,131 +17,109 @@
+         android:textColor="@color/black"
+         android:textSize="35sp"
+         android:textStyle="bold"
++        app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.493"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintVertical_bias="0.143" />
+ 
+     <Button
+         android:id="@+id/btnLogin"
+         android:layout_width="330dp"
+         android:layout_height="55dp"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginEnd="16dp"
++        android:layout_marginHorizontal="16dp"
+         android:layout_marginBottom="16dp"
+         android:background="@drawable/borde_iniciar_sesion"
+         android:fontFamily="@font/open_sans"
+         android:text="@string/login"
+         android:textColor="@color/blanco"
++        app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.489"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintVertical_bias="0.686" />
+ 
+     <Button
+         android:id="@+id/btnRegister"
+         android:layout_width="330dp"
+         android:layout_height="55dp"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginEnd="16dp"
++        android:layout_marginHorizontal="16dp"
+         android:background="@drawable/borde_iniciar_sesion"
+         android:fontFamily="@font/open_sans"
+         android:text="@string/register"
+         android:textColor="@color/white"
++        app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.489"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintVertical_bias="0.778" />
+ 
+-
+     <TextView
+         android:id="@+id/txt_pass"
+         android:layout_width="330dp"
+         android:layout_height="34dp"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginEnd="16dp"
++        android:layout_marginHorizontal="16dp"
+         android:fontFamily="@font/open_sans"
+         android:text="@string/email"
+         android:textColor="@color/black"
+-        android:textSize="16dp"
++        android:textSize="16sp"
+         android:textStyle="bold"
++        app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.489"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintVertical_bias="0.259" />
+ 
+-
+     <TextView
+         android:id="@+id/textView3"
+         android:layout_width="330dp"
+         android:layout_height="34dp"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginEnd="16dp"
++        android:layout_marginHorizontal="16dp"
+         android:fontFamily="@font/open_sans"
+         android:text="@string/pass"
+         android:textColor="@color/black"
+-        android:textSize="16dp"
++        android:textSize="16sp"
+         android:textStyle="bold"
++        app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.489"
+         app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintVertical_bias="0.418" />
+ 
+     <EditText
+         android:id="@+id/editContrasena"
+         android:layout_width="330dp"
+         android:layout_height="47dp"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginEnd="16dp"
++        android:layout_marginHorizontal="16dp"
+         android:layout_marginBottom="16dp"
+-        android:background="@drawable/borde_general"
++        android:background="@drawable/forma_edittext"
+         android:backgroundTint="@color/ligthgrey"
+-        android:ems="10"
+-        android:fontFamily="@font/open_sans"
++        android:elevation="5dp"
+         android:hint="@string/campo_pass"
+         android:inputType="textPassword"
+-        android:minHeight="48dp"
+-        android:paddingStart="15dp"
+-        android:paddingEnd="15dp"
++        android:paddingHorizontal="15dp"
+         android:textColor="@color/black"
+-        android:textColorHighlight="@color/azul"
+         android:textColorHint="@color/gris"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.489"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintVertical_bias="0.489" />
+ 
+     <ImageButton
+         android:id="@+id/mostrar_pass"
+-        style="@style/estilo_check"
+-        android:layout_width="30dp"
+-        android:layout_height="26dp"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="16dp"
++        android:layout_marginEnd="16dp"
+         android:background="@drawable/ojo"
+-        android:minHeight="48dp"
+-        android:textColor="@color/black"
+-        android:textSize="16sp"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.892"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="0.479" />
++        android:elevation="6dp"
++        app:layout_constraintEnd_toEndOf="@+id/editContrasena"
++        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+ 
+     <TextView
+         android:id="@+id/contrasenaOlvidada"
+-        android:layout_width="330dp"
++        android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="36dp"
+         android:fontFamily="@font/open_sans"
+@@ -151,35 +129,29 @@
+         android:textSize="16sp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.493"
++        app:layout_constraintHorizontal_bias="0.834"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="0.555" />
++        app:layout_constraintVertical_bias="0.578" />
+ 
+     <EditText
+         android:id="@+id/editEmail"
+         android:layout_width="330dp"
+         android:layout_height="47dp"
+-        android:layout_marginStart="16dp"
+-        android:layout_marginEnd="16dp"
++        android:layout_marginHorizontal="16dp"
+         android:layout_marginBottom="16dp"
+-        android:background="@drawable/borde_general"
++        android:background="@drawable/forma_edittext"
++        android:elevation="5dp"
+         android:backgroundTint="@color/ligthgrey"
+-        android:ems="10"
+-        android:fontFamily="@font/open_sans"
+         android:hint="@string/campo_email"
+         android:inputType="textEmailAddress"
+-        android:minHeight="48dp"
+-        android:paddingStart="15dp"
+-        android:paddingEnd="15dp"
++        android:paddingHorizontal="15dp"
+         android:textColor="@color/black"
+-        android:textColorHighlight="@color/azul"
+         android:textColorHint="@color/gris"
++        app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintHorizontal_bias="0.489"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintVertical_bias="0.32" />
+ 
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
++</androidx.constraintlayout.widget.ConstraintLayout>
+Index: app/src/main/res/drawable/forma_edittext.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/forma_edittext.xml b/app/src/main/res/drawable/forma_edittext.xml
+new file mode 100644
+--- /dev/null	(date 1718211827133)
++++ b/app/src/main/res/drawable/forma_edittext.xml	(date 1718211827133)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="utf-8"?>
++<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
++
++    <!-- Solo fondo y borde sin sombra -->
++    <item>
++        <shape android:shape="rectangle">
++            <solid android:color="@color/blanco" /> <!-- Color fondo -->
++            <corners android:radius="20dp" /> <!-- Esquinas redondeadas -->
++        </shape>
++    </item>
++
++</layer-list>

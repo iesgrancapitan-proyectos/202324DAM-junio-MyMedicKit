@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyMedicKit</string>
+    <!-- TODO: Supprimer ou changer ce texte de substitution -->
+
+    <!-- Fragment de début -->
+    <string name="iniciotitulo">MyMedicKit</string>
+    <string name="detalles">Détails</string>
+    <string name="hola">Bonjour!, %1$s</string>
+
+    <string name="subtitulo_hola">Voici vos données de profil</string>
+    <!-- Fragment de connexion -->
+    <string name="email">E-mail</string>
+    <string name="campo_email">exemple@example.com</string>
+    <string name="pass">Mot de passe</string>
+    <string name="campo_pass">••••••••••••••</string>
+    <string name="pass_forget">Mot de passe oublié ?</string>
+
+    <string name="login">Se connecter</string>
+    <string name="register">S\'inscrire</string>
+    <string name="frances">Français</string>
+
+
+    <string name="siguiente">Suivant</string>
+    <string name="volver">Retour</string>
+    <string name="finalizar">Terminer</string>
+
+    <!-- Textes pour le fragment de récupération -->
+    <string name="texto_recuperar1">Pour changer votre mot de passe, écrivez à cet email :</string>
+    <string name="texto_recuperar2">mymedickit@gmail.com</string>
+
+    <!-- Textes pour le fragment d'inscription -->
+    <string name="texto_registrarse1">Entrez l\'e-mail pour créer un compte.</string>
+    <string name="texto_registrarse2">Inscription réussie</string>
+    <string name="texto_registrarse3">L\'utilisateur a été créé avec succès, vous pouvez maintenant vous connecter avec le nouvel utilisateur.</string>
+
+    <string name="texto_pass">Entrez un mot de passe</string>
+    <string name="texto_pass2">Répétez le mot de passe</string>
+    <string name="ver_pass">Afficher le mot de passe</string>
+    <string name="espanol">Espagnol</string>
+    <string name="ingles">Anglais</string>
+    <string name="italiano">Italien</string>
+
+    <string name="inicio">Accueil</string>
+    <string name="crear">Ajouter</string>
+    <string name="perfil">Profil</string>
+    <string name="ajustes">Paramètres</string>
+
+    <!-- Ressources pour Facebook -->
+
+    <!-- Noms des paramètres -->
+    <string name="editar">Modifier</string>
+    <string name="privacidad">Langue</string>
+    <string name="listar">Lister</string>
+
+    <string name="chat">Attention au client</string>
+    <string name="notificaciones">Notifications</string>
+    <string name="titulo_perfil">Informations Personnelles</string>
+    <string name="nombre">Prénom</string>
+    <string name="actualizar">Mettre à jour</string>
+    <string name="recordatorios">Rappels</string>
+
+    <string name="editar_perfil">Modifier le Profil</string>
+    <string name="apellidos">Nom de famille</string>
+    <string name="telefono">Téléphone</string>
+    <string name="fecha_nacimiento">Date de Naissance</string>
+    <string name="guardar">Enregistrer</string>
+    <string name="unidades">Quantité</string>
+
+    <string name="texto_comentar_crear">Informations sur le médicament...</string>
+    <string name="titulo_crear">Nom</string>
+    <string name="nuevo_nombre">Nouveau Nom</string>
+
+    <string name="hint_medicamento">Médicament...</string>
+    <string name="publicar_crear">Ajouter un Médicament</string>
+    <string name="Dosis">Dose</string>
+    <string name="ayuda_1">Signaler un Problème</string>
+    <string name="ayuda_2">État du Compte</string>
+    <string name="ayuda_3">Service d\'Aide</string>
+    <string name="ayuda_5">Aide sur la Confidentialité et la Sécurité</string>
+    <string name="cerrar_sesion">Déconnexion</string>
+    <string name="reestablecer_pass">Réinitialiser le Mot de Passe</string>
+    <string name="pref_key_language">préférence de langue\n</string>
+
+    <!-- Messages de Dialogue -->
+    <string name="confirmacion_title">Confirmation</string>
+    <string name="confirmacion_borrar_message">Êtes-vous sûr de vouloir supprimer le médicament ?</string>
+    <string name="confirmacion_cerrar_sesion_message">Êtes-vous sûr de vouloir vous déconnecter ?</string>
+    <string name="confirmacion_cerrar_sesion_positive">Oui</string>
+    <string name="confirmacion_cerrar_sesion_negative">Annuler</string>
+
+    <!-- Rappels/Notifications -->
+    <string name="diariamente">Tous les jours</string>
+    <string name="hoy">Aujourd\'hui seulement</string>
+    <string name="programar">Définir une notification</string>
+    <string name="fecha_caducidad">Date d\'expiration</string>
+    <string name="frecuencia">Fréquence</string>
+    <string name="btn_programar">Notification de planification</string>
+    <string name="alarma">Alarme</string>
+    <string name="error_notificacion">Sélectionnez une option de répétition</string>
+    <string name="notificacion_programada">Notification programmée</string>
+    <string name="Scanner">Scanner</string>
+    <string name="manualmente">Entrer manuellement</string>
+    <string name="fecha_nacimiento_hint">xxxx-xx-xx</string>
+    <string name="nombre_medicamento">Nom du médicament</string>
+    <string name="forma_farmaceutica">Formulaire pharmaceutique</string>
+    <string name="laboratorio">Laboratoire</string>
+    <string name="principios_activos">Principes actifs</string>
+    <string name="preescripcion">Ordonnance</string>
+    <string name="via_administración">Voie d\'administration</string>
+    <string name="CN">CN</string>
+    <string name="mas_informacion">Plus d\'informations</string>
+    <string name="PDF_1">PDF 1</string>
+    <string name="PDF_2">PDF 2</string>
+    <string name="Scan_Code">Scanner le code</string>
+    <string name="buscar_cn">Recherche par CN</string>
+    <string name="introduce_cn">Entrez CN</string>
+    <string name="informacion">Information</string>
+    <string name="codigo_nacional">Code national</string>
+    <string name="enviar">Envoyer</string>
+    <string name="error_list_medicamentos">Erreur dans la liste des médicaments</string>
+    <string name="error_nombre_med">Veuillez écrire le nom d\'un médicament</string>
+    <string name="error_actualizar">Erreur lors de la mise à jour des données</string>
+    <string name="error_registrar_medicamento">Erreur lors de l\'enregistrement du médicament</string>
+    <string name="medicamento_registrado">Médicament correctement enregistré</string>
+
+</resources>

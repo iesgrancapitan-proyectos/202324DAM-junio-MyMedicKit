@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyMedicKit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- Fragment Start -->
+    <string name="iniciotitulo">MyMedicKit</string>
+    <string name="detalles">Details</string>
+    <string name="hola">Hello, %1$s</string>
+    <string name="subtitulo_hola">These are your profile data</string>
+    <!-- Fragment Login -->
+    <string name="email">Email</string>
+    <string name="campo_email">example@example.com</string>
+    <string name="pass">Password</string>
+    <string name="campo_pass">••••••••••••••</string>
+    <string name="pass_forget">Forgot Password?</string>
+
+    <string name="login">Log In</string>
+    <string name="register">Register</string>
+
+    <string name="siguiente">Next</string>
+    <string name="volver">Back</string>
+    <string name="finalizar">Finish</string>
+
+    <!-- Texts for recovery fragment -->
+    <string name="texto_recuperar1">To change your password write to this email:</string>
+    <string name="texto_recuperar2">mymedickit@gmail.com</string>
+
+    <!-- Texts for registration fragment -->
+    <string name="texto_registrarse1">Enter the email to create an account.</string>
+    <string name="texto_registrarse2">Registration successful</string>
+    <string name="texto_registrarse3">The user has been created successfully, you can now log in with the new user.</string>
+
+    <string name="texto_pass">Enter a password</string>
+    <string name="texto_pass2">Repeat the password</string>
+    <string name="ver_pass">Show password</string>
+
+    <string name="inicio">Home</string>
+    <string name="crear">Add</string>
+    <string name="perfil">Profile</string>
+    <string name="ajustes">Settings</string>
+
+    <!-- Facebook Resources -->
+
+    <!-- Settings Names -->
+    <string name="editar">Edit</string>
+    <string name="privacidad">Language</string>
+    <string name="chat">Customer Support</string>
+    <string name="espanol">Spanish</string>
+    <string name="ingles">English</string>
+    <string name="listar">List</string>
+    <string name="italiano">Italian</string>
+    <string name="frances">French</string>
+
+    <string name="notificaciones">Notifications</string>
+    <string name="titulo_perfil">Personal Information</string>
+    <string name="nombre">Name</string>
+    <string name="actualizar">Update</string>
+    <string name="nuevo_nombre">New Name</string>
+    <string name="recordatorios">Recordatory</string>
+
+    <string name="editar_perfil">Edit Profile</string>
+    <string name="apellidos">Last Name</string>
+    <string name="telefono">Phone Number</string>
+    <string name="fecha_nacimiento">Date of Birth</string>
+    <string name="guardar">Save</string>
+    <string name="hint_medicamento">Medication...</string>
+    <string name="texto_comentar_crear">Information about the medication...</string>
+    <string name="titulo_crear">Name</string>
+    <string name="unidades">Amount</string>
+    <string name="publicar_crear">Add Medication</string>
+    <string name="Dosis">Dosis</string>
+    <string name="ayuda_1">Report a Problem</string>
+    <string name="ayuda_2">Account Status</string>
+    <string name="ayuda_3">Help Service</string>
+    <string name="ayuda_5">Privacy and Security Help</string>
+    <string name="cerrar_sesion">Log Out</string>
+    <string name="reestablecer_pass">Reset Password</string>
+    <string name="pref_key_language">Preference Language</string>
+
+    <!-- Mensajes Dialog -->
+    <string name="confirmacion_borrar_message">Are you sure to delete the medication?</string>
+
+    <string name="confirmacion_title">Confirmation</string>
+    <string name="confirmacion_cerrar_sesion_message">Are you sure you want to log out?</string>
+    <string name="confirmacion_cerrar_sesion_positive">Yes</string>
+    <string name="confirmacion_cerrar_sesion_negative">Cancel</string>
+
+    <!-- Recordatorios/Notificaciones -->
+    <string name="diariamente">Daily</string>
+    <string name="hoy">Just today</string>
+    <string name="programar">Set Notification</string>
+    <string name="fecha_caducidad">Expiration date</string>
+    <string name="frecuencia">Frequency</string>
+    <string name="btn_programar">Schedule Notification</string>
+    <string name="alarma">Alarm</string>
+    <string name="error_notificacion">Select a repeat option</string>
+    <string name="notificacion_programada">Scheduled Alarm</string>
+    <string name="Scanner">Scanner</string>
+    <string name="manualmente">Enter Manually</string>
+    <string name="fecha_nacimiento_hint">xxxx-xx-xx</string>
+    <string name="nombre_medicamento">Medication Name</string>
+    <string name="forma_farmaceutica">Pharmaceutical form</string>
+    <string name="laboratorio">Laboratory</string>
+    <string name="principios_activos">Active principles</string>
+    <string name="preescripcion">Prescription</string>
+    <string name="via_administración">Route of Administration</string>
+    <string name="CN">CN</string>
+    <string name="mas_informacion">More information</string>
+    <string name="PDF_1">PDF 1</string>
+    <string name="PDF_2">PDF 2</string>
+    <string name="Scan_Code">Scan Code</string>
+    <string name="buscar_cn">Search by CN</string>
+    <string name="introduce_cn">Enter CN</string>
+    <string name="informacion">Information</string>
+    <string name="codigo_nacional">National Code</string>
+    <string name="enviar">Send</string>
+    <string name="error_list_medicamentos">Error listing medications</string>
+    <string name="error_nombre_med">Please write the name of a medication</string>
+    <string name="error_actualizar">Error updating data</string>
+    <string name="error_registrar_medicamento">Error when registering medication</string>
+    <string name="medicamento_registrado">Correctly registered medication</string>
+
+
+</resources>

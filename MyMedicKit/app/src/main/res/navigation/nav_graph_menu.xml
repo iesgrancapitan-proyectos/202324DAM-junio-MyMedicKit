@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress ALL -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_inicio">
+
+    <fragment
+        android:id="@+id/navigation_ajustes"
+        android:name="es.grancapitan.mymedickit.Ajustes.FragmentAjustes"
+        tools:layout="@layout/ajustes_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_language"
+        android:name="es.grancapitan.mymedickit.Ajustes.FragmentLanguage"
+        tools:layout="@layout/leguaje_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="es.grancapitan.mymedickit.Ajustes.ChatFragment"
+        tools:layout="@layout/chat_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_inicio"
+        android:name="es.grancapitan.mymedickit.MenuFragments.ListaMedicamentosFragment"
+        android:label="Inicio"
+        tools:layout="@layout/lista_medicamentos_fragment" >
+        <action
+            android:id="@+id/action_navigation_inicio_to_navigation_detalle_medicamento"
+            app:destination="@id/navigation_detalle_medicamento" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_detalle_medicamento"
+        android:name="es.grancapitan.mymedickit.Medicamentos.MedicamentoDetallesFragment"
+        android:label="Inicio"
+        tools:layout="@layout/lista_medicamentos_fragment" />
+
+
+    <fragment
+        android:id="@+id/navigation_scanner"
+        android:name="es.grancapitan.mymedickit.MenuFragments.ScannerFragment"
+        android:label="Scanner"
+        tools:layout="@layout/scanner_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_alarmas"
+        android:name="es.grancapitan.mymedickit.MenuFragments.ListaNotificacionesFragment"
+        android:label="Alarmas"
+        tools:layout="@layout/lista_notificacion_fragment">
+        <action
+            android:id="@+id/action_navigation_alarmas_to_navigation_configurar_alarmas"
+            app:destination="@id/navigation_configurar_alarmas" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_configurar_alarmas"
+        android:name="es.grancapitan.mymedickit.Notificaciones.NotificacionFragment"
+        android:label="Configurar Alarmas"
+        tools:layout="@layout/notificaciones_fragment">
+        <action
+            android:id="@+id/action_navigation_configurar_notificaiones"
+            app:destination="@id/navigation_alarmas" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_perfil"
+        android:name="es.grancapitan.mymedickit.MenuFragments.PerfilFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_perfil" />
+</navigation>

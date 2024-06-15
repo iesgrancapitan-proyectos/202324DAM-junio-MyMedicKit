@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_inicio"
+    app:startDestination="@id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="es.grancapitan.mymedickit.InicioFragments.LoginFragment"
+        tools:layout="@layout/login_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="es.grancapitan.mymedickit.InicioFragments.RegistrarFragment"
+        tools:layout="@layout/register_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_contrasena_olvidada"
+        android:name="es.grancapitan.mymedickit.InicioFragments.Contrasena_olvidada"
+        tools:layout="@layout/contrasena_fragment" />
+
+</navigation>

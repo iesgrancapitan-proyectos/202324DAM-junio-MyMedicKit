@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ajustes.FragmentAjustes"
+    android:background="@color/ligthgrey"
+    android:id="@+id/langu">
+
+    <Button
+        android:id="@+id/btn_cerrarSesion"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:background="@drawable/forma_boton"
+        android:backgroundTint="@color/rojo"
+        android:elevation="5dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/cerrar_sesion"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_chat_ajustes" />
+
+    <ImageView
+        android:id="@+id/img_volver_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/forma_boton_redondo"
+        android:elevation="5dp"
+        android:src="@drawable/icon_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tituloAjustes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/ajustes"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toEndOf="@+id/img_volver_perfil"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_lenguaje"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="292dp"
+        android:background="@drawable/forma_boton"
+        android:drawableStart="@drawable/icon_language"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/open_sans"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/privacidad"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_chat_ajustes"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/forma_boton"
+        android:drawableStart="@drawable/icon_atencion_seguridad"
+        android:drawablePadding="16dp"
+        android:fontFamily="@font/open_sans"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/chat"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_lenguaje" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
