@@ -81,5 +81,8 @@ MyMedicKit es una solución integral que combina una aplicación móvil y una ap
         -Sincronización:
           Asegurar que la información de los usuarios esté sincronizada y actualizada entre las aplicaciones móvil y de escritorio.
 
-4. Autores
+### 4. Autores
+Rebeca López Ordóñez
+
+Borja Garramiola Redondo
 [:arrow_up:](#módulo-proyecto-integrado-del-ies-gran-capitán)
