@@ -85,4 +85,3 @@ MyMedicKit es una solución integral que combina una aplicación móvil y una ap
 Rebeca López Ordóñez
 
 Borja Garramiola Redondo
-[:arrow_up:](#módulo-proyecto-integrado-del-ies-gran-capitán)
