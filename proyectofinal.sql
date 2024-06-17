@@ -56,19 +56,6 @@ CREATE TABLE `chat_messages` (
   `email` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `chat_messages`
---
-
-INSERT INTO `chat_messages` (`message_id`, `user_id`, `message`, `timestamp`, `email`) VALUES
-(68, 10, 'rgdgrgdgrdg', '2024-06-12 10:42:23', 'admin@gmail.com'),
-(69, 10, 'que', '2024-06-12 11:03:10', ''),
-(70, 10, 'Hola', '2024-06-12 16:28:04', ''),
-(71, 15, 'HOLA', '2024-06-14 16:43:48', ''),
-(72, 15, 'QUE PASA', '2024-06-14 16:43:55', ''),
-(73, 15, 'Que te pasa', '2024-06-14 17:17:27', 'admin@gmail.com'),
-(74, 15, 'Me he cagado me he hecho caca', '2024-06-15 18:38:36', '');
-
 -- --------------------------------------------------------
 
 --
@@ -126,7 +113,6 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `email`, `contrasena`, `nombre`, `apellidos`, `nacimiento`) VALUES
 (10, 'borja@gmail.com', '$2y$10$.3Jx9HkxmGVVoqlWmlUD8eETLAbtO0llRNp6g4hlSPLdbc2hAQcGC', 'Borja', 'Garramiola', '2001-05-07'),
 (12, 'rebeca@gmail.com', '$2y$10$acuHomaoGp.VkFWh3Se1X.7R3f3c0TeU46I568R0.RuWzgSvI0W8q', 'Rebeca', 'Lopez Ordoñez', '2004-11-21'),
-(13, 'pepito@gmail.com', '$2y$10$YByk.o/2S4zKGkdTnTeUkeE0CyA00ZoVwDBeXrwqbtXj8uA73N9lq', 'pepe', 'Pepez', '1990-07-31'),
 (15, 'prueba1@gmail.com', '$2y$10$TAXcy/dFfUuPedaFyFyQ.u3iYJ1GsvwFq3L08ct0Eju.mcJ/SyrkW', 'Prueb', 'Pruebanez', '2001-06-07'),
 (16, 'prueba2@gmail.com', '$2y$10$o3KnDPqKFL35PX4htNVOBem3Ej.Z/91We1faDmnmIhp781.JtnAXy', 'prueba2', 'prueba2', '2001-05-07');
 
