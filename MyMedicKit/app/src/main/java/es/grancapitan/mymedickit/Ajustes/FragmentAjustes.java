@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,6 +66,10 @@ public class FragmentAjustes extends Fragment {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();
+
+        boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+        Log.d("DEBUG", "isLoggedIn despues de limpiar: " + isLoggedIn);
+
         salir();
     }
 

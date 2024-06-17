@@ -39,13 +39,13 @@
         <activity android:name=".Ajustes.ChatFragment"
             android:windowSoftInputMode="adjustPan" />
 
-
         <receiver android:name=".Notificaciones.NotificacionReceptor" android:exported="true">
             <intent-filter>
                 <action android:name="com.proyect.proyecto.NOTIFICATION_RECEIVER"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
+
     </application>
 
 </manifest>

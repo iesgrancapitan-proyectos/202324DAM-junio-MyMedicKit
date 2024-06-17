@@ -76,7 +76,8 @@ public class MedicamentosAdapter extends RecyclerView.Adapter<MedicamentosAdapte
         }
 
         private void eliminarMedicamento(int medId, int position) {
-            String url = "http://192.168.0.10/BDRemota/wsJSONEliminarMedicamento.php?med_id=" + medId;
+            String ip = context.getString(R.string.ip);
+            String url = ip + "wsJSONEliminarMedicamento.php?med_id=" + medId;
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                     response -> {

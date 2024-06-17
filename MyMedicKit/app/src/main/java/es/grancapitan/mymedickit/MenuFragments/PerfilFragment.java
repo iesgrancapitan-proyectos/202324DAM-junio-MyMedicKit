@@ -172,7 +172,6 @@ public class PerfilFragment extends Fragment implements Response.Listener<JSONOb
         }
     }
 
-    //manejar la respuesta exitosa de la solicitud al web service
     @Override
     public void onResponse(JSONObject response) {
         try {
@@ -186,7 +185,6 @@ public class PerfilFragment extends Fragment implements Response.Listener<JSONOb
         }
     }
 
-    //manejar errores de la solicitud
     @Override
     public void onErrorResponse(VolleyError error) {
         Toast.makeText(getContext(), getString(R.string.error_actualizar), Toast.LENGTH_SHORT).show();

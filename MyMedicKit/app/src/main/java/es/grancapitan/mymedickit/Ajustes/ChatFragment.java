@@ -207,7 +207,8 @@ public class ChatFragment extends Fragment {
         protected ArrayList<Mensaje> doInBackground(Integer... params) {
             //recibir mensajes del servidor
             int userId = params[0];
-            String url = "http://192.168.0.10/BDRemota/wsReceiveMessages.php?user_id=" + userId;
+            String ip = getString(R.string.ip);
+            String url = ip +"wsReceiveMessages.php?user_id=" + userId;
             ArrayList<Mensaje> newMessages = new ArrayList<>();
 
             try {

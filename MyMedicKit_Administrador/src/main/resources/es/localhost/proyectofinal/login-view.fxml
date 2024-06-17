@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="790.0" prefWidth="1200.0" styleClass="grid-pane" stylesheets="@css/estilo.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.localhost.proyectofinal.LoginController">
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25" />
+    </padding>
+
+    <Text fx:id="Titulo" layoutX="525.0" layoutY="216.0" styleClass="titulo-text" text="Inicio Sesión" />
+    <Text layoutX="531.0" layoutY="302.0" styleClass="subtitulo-text" text="Rellene los campos:" />
+    <TextField fx:id="emailField" layoutX="500.0" layoutY="331.0" promptText="Correo Electrónico:" styleClass="campo-texto" />
+    <PasswordField fx:id="passwordField" layoutX="500.0" layoutY="385.0" promptText="Contraseña:" styleClass="password-field" />
+
+    <Button layoutX="500.0" layoutY="469.0" onAction="#handleLoginButtonAction" styleClass="boton" text="Iniciar Sesión" />
+</AnchorPane>

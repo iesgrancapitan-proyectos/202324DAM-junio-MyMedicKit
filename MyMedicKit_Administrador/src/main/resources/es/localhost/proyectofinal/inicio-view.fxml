@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1200.0" styleClass="panel-clientes" stylesheets="@css/estilo.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.localhost.proyectofinal.ClientesController">
+
+    <GridPane fx:id="detallesPanel" hgap="10" layoutX="312.0" layoutY="50.0" prefHeight="294.0" prefWidth="460.0" vgap="10" visible="true">
+        <Label styleClass="subtitulo-text" text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="nombreTextField" styleClass="campo-texto" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label styleClass="subtitulo-text" text="Apellidos:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="apellidosTextField" styleClass="campo-texto" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label styleClass="subtitulo-text" text="Fecha de Nacimiento:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField fx:id="nacimientoTextField" styleClass="campo-texto" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label styleClass="subtitulo-text" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextField fx:id="emailTextField" styleClass="campo-texto" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label styleClass="subtitulo-text" text="Nueva Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <PasswordField fx:id="passwordField" styleClass="password-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Button onAction="#BotonActualizar" styleClass="boton" text="Actualizar" GridPane.rowIndex="7" />
+        <Button onAction="#BotonEliminar" styleClass="boton_eliminar" text="Eliminar" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+    </GridPane>
+
+    <AnchorPane fx:id="chatPanel" layoutX="249.0" layoutY="50.0" prefHeight="618.0" prefWidth="930.0" visible="false">
+        <children>
+            <Label layoutX="14.0" layoutY="5.0" text="Servicio atención al cliente" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="5.0" />
+            <ListView fx:id="chatListView" layoutY="18.0" prefHeight="480.0" prefWidth="616.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0" />
+
+            <Button layoutY="574.0" onAction="#BotonLimpiarChat" prefHeight="43.0" prefWidth="216.0" styleClass="boton_eliminar" text="Limpiar Chat" />
+            <TextField fx:id="messageTextField" layoutY="513.0" prefHeight="43.0" prefWidth="407.0" styleClass="texto-chat" />
+            <Button layoutX="370.0" layoutY="513.0" onAction="#BotonEnviar" prefHeight="43.0" prefWidth="110.0" styleClass="boton_enviar" text="Enviar" />
+        </children>
+    </AnchorPane>
+
+    <Text fx:id="Titulo" layoutX="14.0" layoutY="35.0" styleClass="titulo-text" text="Clientes" />
+    <ListView fx:id="clientesListView" layoutX="14.0" layoutY="55.0" prefHeight="564.0" prefWidth="222.0" />
+
+    <Pane fx:id="menuPanel" layoutY="710.0" prefHeight="80.0" prefWidth="1200.0" styleClass="panel-barra">
+        <Button fx:id="btnVolver" layoutX="550.0" layoutY="21.0" onAction="#MostrarDetalle" styleClass="botonNavigation" />
+        <Button fx:id="btnDetalles" layoutX="650.0" layoutY="21.0" onAction="#MostrarChat" styleClass="botonNavigation" />
+    </Pane>
+</AnchorPane>

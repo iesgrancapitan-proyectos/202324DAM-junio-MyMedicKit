@@ -1,0 +1,95 @@
+.grid-pane {
+    -fx-alignment: center;
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
+    -fx-padding: 25px;
+}
+
+.panel-carga {
+    -fx-background-color: #2bbdd1;
+    -fx-border-radius: 5px;
+}
+
+.panel-barra {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 20, 0, 0, -5);
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+}
+
+
+.panel-clientes {
+    -fx-background-color: white;
+    -fx-border-radius: 10px;
+}
+
+.titulo-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Yu Gothic UI Semibold";
+}
+
+.subtitulo-text {
+    -fx-font-size: 16px;
+}
+
+.etiqueta {
+    -fx-font-size: 14px;
+}
+
+.campo-texto, .password-field {
+    -fx-font-size: 14px;
+    -fx-pref-width: 200px;
+    -fx-background-color: #f0f0f0;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.25), 20, 0, 5, 5);
+}
+
+.texto-chat{
+    -fx-font-size: 14px;
+    -fx-pref-width: 350px;
+    -fx-background-color: #f0f0f0;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.25), 20, 0, 5, 5);
+}
+.botonNavigation{
+    -fx-background-color: white;
+
+}
+.boton {
+    -fx-background-color: #2bbdd1;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 200px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.25), 20, 0, 5, 5);
+}
+
+.boton_eliminar {
+    -fx-background-color: #D34040;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 200px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.25), 20, 0, 5, 5);
+}
+
+.boton_enviar {
+    -fx-background-color: #2BBDD1;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-pref-width: 110px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.25), 20, 0, 5, 5);
+}
+
+.enlace {
+    -fx-text-fill: #2bbdd1;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.error {
+    -fx-text-fill: red;
+    -fx-font-size: 12px;
+    -fx-pref-width: 400px;
+    -fx-wrap-text: true;
+    -fx-text-alignment: center;
+}
