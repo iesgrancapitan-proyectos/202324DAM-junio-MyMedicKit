@@ -27,16 +27,13 @@ MyMedicKit es una solución integral que combina una aplicación móvil y una ap
   
       ·Aplicación Móvil:
     
-        Descargar el instalador desde el repositorio.
-        
-        Ejecutar el instalador y seguir las instrucciones del manual del usuario.
+       Seguir instrucciones del manual de instalacion.
 
       
     ·Aplicación de Escritorio:
     
-        Descargar el instalador desde el repositorio.
-        
-        Ejecutar el instalador y seguir las instrucciones del manual del administrador.
+      Seguir instrucciones del manual de instalacion.
+
 
     -Configuración Inicial:
   
