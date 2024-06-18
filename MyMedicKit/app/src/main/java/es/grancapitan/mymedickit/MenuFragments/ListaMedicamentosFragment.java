@@ -2,16 +2,16 @@ package es.grancapitan.mymedickit.MenuFragments;
 
 import static android.content.Context.MODE_PRIVATE;
 
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,35 +27,46 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import es.grancapitan.mymedickit.Objetos.Medicamento;
 import es.grancapitan.mymedickit.Medicamentos.MedicamentosAdapter;
+import es.grancapitan.mymedickit.Objetos.Medicamento;
 import es.grancapitan.mymedickit.R;
 
 public class ListaMedicamentosFragment extends Fragment implements Response.Listener<JSONObject>, Response.ErrorListener {
 
-    RecyclerView recyclerMedicamentos;
-    ArrayList<Medicamento> listaMedicamentos;
-    RequestQueue request;
-    JsonObjectRequest jsonObjectRequest;
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+    private RecyclerView recyclerMedicamentos;
+    private ArrayList<Medicamento> listaMedicamentos;
+    private MedicamentosAdapter adapter;
+    private RequestQueue request;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.lista_medicamentos_fragment, container, false);
 
         recyclerMedicamentos = vista.findViewById(R.id.recyclerViewMedicamentos);
-        recyclerMedicamentos.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        recyclerMedicamentos.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerMedicamentos.setHasFixedSize(true);
 
         listaMedicamentos = new ArrayList<>();
+        adapter = new MedicamentosAdapter(requireActivity(), listaMedicamentos);
+        recyclerMedicamentos.setAdapter(adapter);
 
         request = Volley.newRequestQueue(requireContext());
 
-        cargarWebService(); //lista los medicamentos del usuario logueado
+        cargarWebService();
+
+        SearchView searchView = vista.findViewById(R.id.searchViewMedicamentos);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.filter(newText); //filtrar la lista cada vez que cambie el texto en el SearchView
+                return true;
+            }
+        });
 
         return vista;
     }
@@ -67,30 +78,34 @@ public class ListaMedicamentosFragment extends Fragment implements Response.List
         String ip = getString(R.string.ip);
         String url = ip + "wsJSONListarMedicamentos.php?user_id=" + user_id;
 
-        jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, this, this);
 
         request.add(jsonObjectRequest);
     }
 
     @Override
     public void onErrorResponse(VolleyError volleyError) {
-        Toast.makeText(getContext(), getString(R.string.error_list_medicamentos), Toast.LENGTH_SHORT).show();
+        Toast.makeText(requireContext(), getString(R.string.error_list_medicamentos), Toast.LENGTH_SHORT).show();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onResponse(JSONObject jsonObject) {
-        Medicamento medicamento;
+        listaMedicamentos.clear(); //limpiar la lista actual antes de cargar nuevos datos
 
         JSONArray json = jsonObject.optJSONArray("medicamentos");
 
         if (json != null) {
             for (int i = 0; i < json.length(); i++) {
-                medicamento = new Medicamento();
-                JSONObject jsonObject1;
                 try {
-                    jsonObject1 = json.getJSONObject(i);
-                    medicamento.setMed_id(jsonObject1.getInt("med_id"));
-                    medicamento.setNombre(jsonObject1.optString("nombre"));
+                    JSONObject jsonObject1 = json.getJSONObject(i);
+                    int medId = jsonObject1.getInt("med_id");
+                    String nombre = jsonObject1.optString("nombre");
+
+                    Medicamento medicamento = new Medicamento();
+                    medicamento.setMed_id(medId);
+                    medicamento.setNombre(nombre);
+
                     listaMedicamentos.add(medicamento);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -98,7 +113,8 @@ public class ListaMedicamentosFragment extends Fragment implements Response.List
             }
         }
 
-        MedicamentosAdapter adapter = new MedicamentosAdapter((FragmentActivity) getContext(), listaMedicamentos);
+        adapter.notifyDataSetChanged(); //notificar al adaptador que los datos han cambiado
+        adapter = new MedicamentosAdapter(requireActivity(), listaMedicamentos);
         recyclerMedicamentos.setAdapter(adapter);
     }
 }

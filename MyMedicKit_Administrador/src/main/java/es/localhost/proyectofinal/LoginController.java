@@ -24,7 +24,7 @@ import java.util.regex.Pattern;
 
 public class LoginController implements Initializable {
 
-    private static final String ip = "http://192.168.0.10/WebServices/";
+    private static final String ip = "http://192.168.0.22/WebServices/";
 
     @FXML
     private TextField emailField;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">192.168.0.10</domain>
+        <domain includeSubdomains="true">192.168.0.22</domain>
         <!--<domain includeSubdomains="true">mymedicbox.000webhostapp.com</domain>-->
     </domain-config>
 </network-security-config>

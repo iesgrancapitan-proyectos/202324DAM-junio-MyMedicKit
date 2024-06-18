@@ -24,7 +24,7 @@ import java.util.TimerTask;
 
 public class ClientesController {
 
-    private final String ip = "http://192.168.0.10/WebServices/";
+    private final String ip = "http://192.168.0.22/WebServices/";
 
     @FXML
     private Button btnVolver;
@@ -42,6 +42,8 @@ public class ClientesController {
     private TextField nacimientoTextField;
     @FXML
     private PasswordField passwordField;
+    @FXML
+    private TextField filtroNombreTextField;
 
     @FXML
     private ListView<ChatMessage> chatListView;
@@ -62,19 +64,20 @@ public class ClientesController {
     private void initialize() {
         clientes = obtenerClientes();
         mostrarClientes(clientes);
-
         clientesListView.setCellFactory(listView -> new ClienteListCell());
 
+        // Configuración de eventos
         clientesListView.setOnMouseClicked((MouseEvent event) -> {
             if (event.getClickCount() > 0) {
                 mostrarDetallesCliente(clientesListView.getSelectionModel().getSelectedIndex());
             }
         });
 
-        chatListView.setCellFactory(listView -> new ChatMessageCell());
+        filtroNombreTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filtrarClientes(newValue);
+        });
 
-        clientesListView.setStyle("-fx-background-insets: 0 ;");
-        chatListView.setStyle("-fx-background-insets: 0 ;");
+        chatListView.setCellFactory(listView -> new ChatMessageCell());
 
         ActualizarChat();
         configurarBotonVolver();
@@ -138,6 +141,18 @@ public class ClientesController {
         }
 
         return clientes;
+    }
+
+    private void filtrarClientes(String nombre) {
+        List<Cliente> clientesFiltrados = new ArrayList<>();
+
+        for (Cliente cliente : clientes) {
+            if (cliente.getNombre().toLowerCase().contains(nombre.toLowerCase())) {
+                clientesFiltrados.add(cliente);
+            }
+        }
+
+        mostrarClientes(clientesFiltrados);
     }
 
     private void mostrarClientes(List<Cliente> clientes) {

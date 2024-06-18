@@ -24,6 +24,20 @@
 
         <Button onAction="#BotonActualizar" styleClass="boton" text="Actualizar" GridPane.rowIndex="7" />
         <Button onAction="#BotonEliminar" styleClass="boton_eliminar" text="Eliminar" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
     </GridPane>
 
     <AnchorPane fx:id="chatPanel" layoutX="249.0" layoutY="50.0" prefHeight="618.0" prefWidth="930.0" visible="false">
@@ -38,7 +52,8 @@
     </AnchorPane>
 
     <Text fx:id="Titulo" layoutX="14.0" layoutY="35.0" styleClass="titulo-text" text="Clientes" />
-    <ListView fx:id="clientesListView" layoutX="14.0" layoutY="55.0" prefHeight="564.0" prefWidth="222.0" />
+    <ListView fx:id="clientesListView" layoutX="14.0" layoutY="81.0" prefHeight="629.0" prefWidth="222.0" />
+    <TextField fx:id="filtroNombreTextField" layoutX="14.0" layoutY="50.0" prefHeight="30.0" prefWidth="222.0" promptText="Filtrar por nombre..." />
 
     <Pane fx:id="menuPanel" layoutY="710.0" prefHeight="80.0" prefWidth="1200.0" styleClass="panel-barra">
         <Button fx:id="btnVolver" layoutX="550.0" layoutY="21.0" onAction="#MostrarDetalle" styleClass="botonNavigation" />

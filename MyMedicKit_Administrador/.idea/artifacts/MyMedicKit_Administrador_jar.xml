@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MyMedicKit_Administrador:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MyMedicKit_Administrador_jar</output-path>
+    <root id="archive" name="MyMedicKit_Administrador.jar">
+      <element id="module-output" name="MyMedicKit_Administrador" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/20.0.1/javafx-controls-20.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/20.0.1/javafx-base-20.0.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/20.0.1/javafx-graphics-20.0.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/json/json/20231013/json-20231013.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-base/20.0.1/javafx-base-20.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/20.0.1/javafx-fxml-20.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/20.0.1/javafx-graphics-20.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/20.0.1/javafx-fxml-20.0.1-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/20.0.1/javafx-controls-20.0.1-win.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
